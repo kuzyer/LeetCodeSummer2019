@@ -1,5 +1,6 @@
 //树专题-LeetCode98.验证二叉搜索树
 public class test001 {
+    //DFS
     public boolean isValidBST(TreeNode root) {
         return isValidTree(root, null, null);
     }
