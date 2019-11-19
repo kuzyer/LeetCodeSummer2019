@@ -1,5 +1,6 @@
 //树专题-LeetCode543.二叉树的直径
 public class test008 {
+    //dfs
     public int ans;
     public int diameterOfBinaryTree(TreeNode root) {
         ans = 1;
