@@ -1,4 +1,4 @@
-//字符串处理专题-273.整数转换英文表示
+//字符串处理专题-LeetCode273.整数转换英文表示
 public class test010 {
     private final static String[] LESS_THAN_20 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",               "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     private final static String[] TENS = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty",                   "Ninety"};
