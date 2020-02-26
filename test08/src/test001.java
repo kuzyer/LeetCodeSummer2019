@@ -1,4 +1,5 @@
 //动态规划专题-LeetCode53.最大子序和
+//状态表示，状态初始化，状态转移和结果表示
 public class test001 {
     public int maxSubArray(int[] nums) {
         int n = nums.length;
