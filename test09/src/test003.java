@@ -9,6 +9,7 @@
 public class test003 {
     public static int[] array = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
 
+    //移位法
     public static void sort(int[] arr) {
         if (arr == null || arr.length == 0)
             return;
@@ -24,8 +25,25 @@ public class test003 {
         }
     }
 
+    //交换法
+    public static void sort2(int[] arr) {
+        if (arr == null || arr.length == 0)
+            return;
+
+        for (int i = 1; i < arr.length; i++) {
+            int j = i - 1;
+            while (j >= 0 && arr[j] > arr[j + 1]) {
+                //只要大就交换操作
+                arr[j + 1] = arr[j] + arr[j + 1];
+                arr[j] = arr[j + 1] - arr[j];
+                arr[j + 1] = arr[j + 1] - arr[j];
+                j--;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        sort(array);
+        sort2(array);
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
