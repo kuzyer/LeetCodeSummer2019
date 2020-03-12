@@ -35,12 +35,19 @@ public class test003 {
             int j = i - 1;
             while (j >= 0 && arr[j] > arr[j + 1]) {
                 //只要大就交换操作
-                arr[j + 1] = arr[j] + arr[j + 1];
-                arr[j] = arr[j + 1] - arr[j];
-                arr[j + 1] = arr[j + 1] - arr[j];
+//                arr[j + 1] = arr[j] + arr[j + 1];
+//                arr[j] = arr[j + 1] - arr[j];
+//                arr[j + 1] = arr[j + 1] - arr[j];
+                swap(arr, j, j + 1);
                 j--;
             }
         }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        arr[i] = arr[i] + arr[j];
+        arr[j] = arr[i] - arr[j];
+        arr[i] = arr[i] - arr[j];
     }
 
     public static void main(String[] args) {
