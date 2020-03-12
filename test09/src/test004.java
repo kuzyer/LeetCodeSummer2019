@@ -19,13 +19,20 @@ public class test004 {
             for (int i = gap + 1; i < arr.length; i++) {
                 int j = i - gap;
                 while (j >= 0 && arr[j] > arr[j + gap]) {
-                    arr[j + gap] = arr[j] + arr[j + gap];
-                    arr[j] = arr[j + gap] - arr[j];
-                    arr[j + gap] = arr[j + gap] - arr[j];
+//                    arr[j + gap] = arr[j] + arr[j + gap];
+//                    arr[j] = arr[j + gap] - arr[j];
+//                    arr[j + gap] = arr[j + gap] - arr[j];
+                    swap(arr, j, j + gap);
                     j = j - gap;
                 }
             }
         }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        arr[i] = arr[i] + arr[j];
+        arr[j] = arr[i] - arr[j];
+        arr[i] = arr[i] - arr[j];
     }
 
     public static void main(String[] args) {
@@ -34,4 +41,5 @@ public class test004 {
             System.out.println(array[i]);
         }
     }
+
 }
