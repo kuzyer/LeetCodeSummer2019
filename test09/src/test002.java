@@ -5,6 +5,7 @@
     最好情况O(nlogn)
     最坏情况O(n2)
     空间复杂度O(1)
+    不稳定
  */
 public class test002 {
     public static int[] array = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
