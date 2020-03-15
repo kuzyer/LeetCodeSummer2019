@@ -16,7 +16,7 @@ public class test004 {
         int gap = arr.length / 2;
         for (; gap > 0; gap = gap / 2) {
 
-            for (int i = gap + 1; i < arr.length; i++) {
+            for (int i = gap; i < arr.length; i++) {
                 int j = i - gap;
                 while (j >= 0 && arr[j] > arr[j + gap]) {
 //                    arr[j + gap] = arr[j] + arr[j + gap];
