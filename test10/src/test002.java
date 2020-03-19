@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 //中序遍历的特点： 左根右
-//Tree层序遍历：0123456789，中序遍历：7381940526
+//Tree层次遍历：0123456789，中序遍历：7381940526
 public class test002 {
     public static void main(String[] args) {
         TreeNode[] node = new TreeNode[10];
