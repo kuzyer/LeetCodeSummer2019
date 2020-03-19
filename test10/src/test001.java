@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 //前序遍历的特点： 根左右，即根节点在前面
-//Tree层序遍历：0123456789，前序遍历：01378490256
+//Tree层次遍历：0123456789，前序遍历：01378490256
 public class test001 {
     public static void main(String[] args) {
         TreeNode[] node = new TreeNode[10];
