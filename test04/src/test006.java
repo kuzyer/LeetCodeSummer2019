@@ -22,6 +22,7 @@ public class test006 {
             L--;
             R++;
         }
+        //去掉之前的多操作的（L-- R++）
         return R - L - 1;
     }
 }
