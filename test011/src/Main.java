@@ -45,13 +45,13 @@ public class Main {
 //    }
 
     //最长回文字前缀
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            String a = sc.next();
-            System.out.println(longest(a));
-        }
-    }
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        while (sc.hasNext()) {
+//            String a = sc.next();
+//            System.out.println(longest(a));
+//        }
+//    }
 
     public static int longest(String s) {
         if (s == null || s.length() == 0)
@@ -81,4 +81,66 @@ public class Main {
         }
         return R - L - 1;
     }
+
+
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        int m = obstacleGrid.length;
+        if (m == 0) {
+            return 0;
+        }
+        int n = obstacleGrid[0].length;
+        if (n == 0) {
+            return 0;
+        }
+
+        int[][] dp = new int[m][n];
+        dp[0][0] = 1;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (obstacleGrid[i][j] == 1) {
+                    dp[i][j] = 0;
+                } else {
+                    if (i > 0) {
+                        dp[i][j] += dp[i-1][j];
+                    }
+                    if (j > 0) {
+                        dp[i][j] += dp[i][j-1];
+                    }
+                }
+            }
+        }
+
+        return dp[m-1][n-1];
+
+    }
+
+    //树的高度
+    //https://exercise.acmcoder.com/online/online_judge_ques?ques_id=3329&konwledgeId=155
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] tree = new int[n];
+        for (int i = 0; i < n; i++) {
+            tree[i] = -1;
+        }
+        for (int i = 0; i < n-1; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            tree[b] = a;
+        }
+        int high = 0;
+        for (int i = 0; i < n; i++) {
+            int max = 1;
+            int j = i;
+            while (tree[j] != -1) {
+                max++;
+                j = tree[j];
+            }
+            high = max > high? max : high;
+        }
+        System.out.println(high);
+
+    }
+
 }
