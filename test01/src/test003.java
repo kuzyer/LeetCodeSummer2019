@@ -1,4 +1,5 @@
 //二分法-LeetCode34.在排序数组中查找元素的第一个和最后一个位置
+//参考模板https://www.acwing.com/blog/content/31/，需要理解为什么求左边界时需要加1
 public class test003 {
     public int[] searchRange(int[] nums, int target) {
         int[] targetRange = {-1, -1};
