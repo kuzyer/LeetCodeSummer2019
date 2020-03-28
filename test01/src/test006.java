@@ -4,7 +4,9 @@ public class test006 {
         if (nums == null || nums.length == 0) return -1;
         int l = 0, r = nums.length - 1;
         //排除数组单调情况
+        //如果旋转了
         if (nums[r] < nums[0]) {
+            //找出数组中最小值位置，将范围进行缩小
             while (l < r) {
                 int mid = l + (r - l) / 2;
                 if (nums[mid] < nums[0]) {
