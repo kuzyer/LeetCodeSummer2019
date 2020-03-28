@@ -6,7 +6,7 @@ public class test003 {
         if (nums == null || nums.length == 0) return targetRange;
 
         int l = 0, r = nums.length - 1;
-        //找最接近mid的右边界
+        //从左到右找到第一个>=target的元素 - 左边界
         while (l < r) {
             int mid = l + (r - l) / 2;
             if (nums[mid] >= target) {
@@ -24,7 +24,7 @@ public class test003 {
 
         l = 0;
         r = nums.length - 1;
-        //找最接近mid的左边界
+        //第一个从右到左<=target的元素 - 右边界
         while (l < r) {
             int mid = 1 + l + (r - l) / 2;
             if (nums[mid] <= target) {
